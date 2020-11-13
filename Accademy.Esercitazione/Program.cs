@@ -11,10 +11,10 @@ namespace Accademy.Esercitazione
         static void Main(string[] args)
         {
             //test();
-            ProdottiInOfferta();
+            TestProdottiInOfferta();
         }
 
-        private static void ProdottiInOfferta()
+        private static void TestProdottiInOfferta()
         {
             throw new NotImplementedException();
         }
