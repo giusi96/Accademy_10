@@ -10,7 +10,7 @@ namespace Accademy.Esercitazione
     {
         static void Main(string[] args)
         {
-            //test();
+            //TestProdotti();
             TestProdottiInOfferta();
         }
 
@@ -19,7 +19,7 @@ namespace Accademy.Esercitazione
             throw new NotImplementedException();
         }
 
-        private static void test()
+        private static void TestProdotti()
         {
             Console.WriteLine("Inserisci il nome del negozio: ");
             string nome_negozio = Console.ReadLine();
