@@ -52,10 +52,36 @@ namespace Accademy.Helper
                 return r.Next(min, max);
             }
         }
+        public static double GetRandomDouble(double min, double max)
+        {
+            if (min > max)
+            {
+                throw new RandomArgumentsException();
+            }
+            else
+            {
+                int seed = Guid.NewGuid().GetHashCode(); //mi serve per avere un seme in Random altrimenti mi stamperebbe sempre gli stessi numeri
+                                                         //alternativa: mettere come seme l'ora del PC
+                Random r = new Random(seed);
+                return r.NextDouble() *(max-min)+min;
+            }
+        }
         public static int GetSameInt(int sameint)
         {
             return sameint;
         }
 
+        public static string GetNumConto(int numChars)
+        {
+            string cc = "";
+            if (numChars<=36)
+            {
+                Guid newGuid = Guid.NewGuid();
+                string s_newGuid = newGuid.ToString();
+                cc = s_newGuid.Substring(0, numChars);
+            }
+
+            return cc;            
+        }
     }
 }

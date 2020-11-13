@@ -31,23 +31,24 @@ namespace Accademy.Console
         private static void Test_Tris()
         {
             //creare casualmente una matrice 3x3 che contengono 1 o 0 e vedere se c'è una soluzione del tris
-            //ciclo while finchè non vince qaulcuno: giocatore A->1 e gioatore B->2 limitato ad un contatore di 9 mosse
-            //giocatoreA mette 1 in una posizione qualsiasi, giocatoreB mette 2 in una posizione non occupato
+            //ciclo while finchè non vince qaulcuno: giocatore A->1 e gioatore B->2 limitato ad un contatore
+            //di 9 mosse giocatoreA mette 1 in una posizione qualsiasi, giocatoreB mette 2 in una posizione 
+            //non occupato.
             //Ogni volta che un giocatore fa una mossa devo verificare se ha vinto
             int[,] Tris = new int[3, 3];
 
-            initTris(Tris);
+            initTris(Tris); //inizializzazione della matrice a 0
 
-            bool ThereIsaWinner = false;
+            bool ThereIsaWinner = false; //dare dei nomi parlanti
             bool NoMoreMoves = false;
             bool A_isWinner = false;
             bool B_isWinner = false;
 
-            while (!ThereIsaWinner && !NoMoreMoves)
+            while (!ThereIsaWinner && !NoMoreMoves) //finchè non c'è un vincitore e ci sono mosse, cicla
             {
                 Move(1, Tris); //A è il mio 1, B è il mio 2
 
-                A_isWinner = IsWinner(1, Tris);
+                A_isWinner = IsWinner(1, Tris); //dopo che A ha mosso, mi domando se ha vinto
 
                 if (A_isWinner)                
                     ThereIsaWinner = true;             
@@ -55,16 +56,16 @@ namespace Accademy.Console
                 {
                     if (!ThereAreMoves(Tris))                   
                         NoMoreMoves = true;                   
-                    else
+                    else                     //se A non ha vinto e ci sono ancora mosse, muove B
                     {
                         Move(2, Tris);
-                        B_isWinner = IsWinner(2, Tris);
+                        B_isWinner = IsWinner(2, Tris); //mi domando se ha fatto tris, dopo che ha mosso
 
                         if (B_isWinner)                        
                             ThereIsaWinner = true;
                         else
                         {
-                            if (!ThereAreMoves(Tris))
+                            if (!ThereAreMoves(Tris)) // se B non ha vinto, mi domando se ci sono ancora mosse e si riparte
                                 NoMoreMoves = true;
                         }
                     }
@@ -92,14 +93,14 @@ namespace Accademy.Console
                 {
                     if (matrix[i, j] == v)
                     {
-                        result = RowControl(v, i, matrix);
+                        result = RowControl(v, i, matrix); //controlla se sulla riga siano tutti 1 o 2
                         if (result == true) 
                             break;
-                        result = ColumnControl(v, j, matrix);
+                        result = ColumnControl(v, j, matrix);//controlla sulla colonna
                         if (result == true) 
                             break;
                         if ((i + j) % 2 == 0) 
-                            result = DiagonalControl(v, i, j, matrix);
+                            result = DiagonalControl(v, i, j, matrix); //controlla sulle diagonali
                         if (result == true) 
                             break;
                     }
@@ -180,7 +181,7 @@ namespace Accademy.Console
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    if (matrix[i, j] == 0)
+                    if (matrix[i, j] == 0) //se ci sono ancora 0, ci sono ancora mosse
                     {
                         result = true;
                         break;
@@ -192,21 +193,22 @@ namespace Accademy.Console
             return result;
         }
 
-        private static void Move(int v, int[,] matrix)
+        private static void Move(int v, int[,] matrix) //v-> o 1 o 2
         {
             int position = Accademy.Helper.Helper.GetRandomInt(0, 9);
 
-            while (!isAvailable(position, matrix))
-                position = (position + 1) % 9;
+            while (!isAvailable(position, matrix)) //se la posizione non è disponibile, faccio la posizione+1 modulo 9 (perchè devo restare all'interno di 0e 8)
+                position = (position + 1) % 9;      //è semi-randomica: trovo l'altra posizione facendo tale procedimento
             
-            matrix[position / 3, position % 3] = v;
+            matrix[position / 3, position % 3] = v; //il quoziente della divisione è la riga della matrice
+                                                    //il modulo(resto) è la colonna della matrice    
         }
 
         private static bool isAvailable(int position, int[,] matrix)
         {
             bool result = false;
 
-            if (matrix[position / 3, position % 3] == 0) 
+            if (matrix[position / 3, position % 3] == 0) // se è 0, è libera, viceversa no.
                 result = true;
 
             return result;
