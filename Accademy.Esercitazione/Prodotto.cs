@@ -45,7 +45,7 @@ namespace Accademy.Esercitazione
 
         public override string ToString()
         {
-            return Codice+"\t"+Descrizione+"\t"+ Prezzo+ "\t"+ Sconto;
+            return Codice+"\t"+Descrizione+"\t"+ Prezzo + "€" + "\t"+ Sconto + "%";
         }
     }
 }
