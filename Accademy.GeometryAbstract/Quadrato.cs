@@ -9,7 +9,7 @@ namespace Accademy.GeometryAbstract
     public class Quadrato : FiguraGeometrica //eredito da FiguraGeometrica che è astratta->Quadrato diventa astratta, ma per evitarlo 
                                              //implemento qui in quadrato i 2 metodi astratti GetArea e GetPeriemtro con override
 
-        {
+    {
         private double lato;
         public Quadrato(double lato)
         {

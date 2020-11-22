@@ -371,11 +371,10 @@ namespace Accademy.Console
             System.Console.ReadLine();
 
         }
-
         private static void TestRandom()
         {
           //apertura file di testo in scrittura
-            String dir = @"C:\temp";
+            String dir = @"C:\Users\giusi.balsamo\Desktop\MicrosoftAccademy\temp";
             String filename = "accademy_random.txt";
             String path = System.IO.Path.Combine(dir, filename);
          
@@ -495,7 +494,7 @@ namespace Accademy.Console
         }
         private static void TestGeometryAbstract()
         {
-            GeometryAbstract.Quadrato q1 = new GeometryAbstract.Quadrato(11.009);
+            GeometryAbstract.Quadrato q1 = new GeometryAbstract.Quadrato(11.009); //l'ho instanziata perchè in quadrato ho fatto l'override dei metodi astratti, altrimenti non avrei potuto
             GeometryAbstract.Cerchio c1 = new GeometryAbstract.Cerchio(9.25);
 
             /*Siccome tutte le figure devono essere stampate con area e perimetro (hanno lo stesso comportamento->polimorfismo), 
@@ -595,7 +594,7 @@ namespace Accademy.Console
         }
         private static void TestReadFile()
         {
-            String dir = @"C:\temp";
+            String dir = @"C:\Users\giusi.balsamo\Desktop\MicrosoftAccademy\temp";
             String filename = "pressione.txt";
             String path = dir + @"\" + filename;
 
