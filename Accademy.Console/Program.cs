@@ -24,7 +24,7 @@ namespace Accademy.Console
             // TestGeneric();
             //TestUni_001();
             //TestUni_002();
-            Test_Tris();
+            //Test_Tris();
 
         }
 
@@ -117,7 +117,7 @@ namespace Accademy.Console
             bool diagonal = false;
             bool antidiagonal = false;
 
-            if (i == j)
+            if (i == j) //diagonale principale
             {
                 diagonal = true;
 
@@ -129,7 +129,7 @@ namespace Accademy.Console
                         diagonal = diagonal && false;
                 }
             }
-            if (i + j == 2)
+            if (i + j == 2) //diagonale secondaria
             {
                 antidiagonal = true;
 
