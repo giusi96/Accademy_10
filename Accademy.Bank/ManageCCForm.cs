@@ -32,9 +32,9 @@ namespace Accademy.Bank
             using (System.IO.StreamReader file = new System.IO.StreamReader(CCFilename))
             {
                 string line;
-                char[] chararray = new char[1]; // se scrivessi char[] ca starei dichiarando un puntatore vuoto
+                char[] chararray = new char[1]; // se scrivessi char[] starei dichiarando un puntatore vuoto
                 chararray[0] = ';';
-                while (!String.IsNullOrEmpty(line = file.ReadLine())) // quella tra paresntesi si chiama guardia ed e' un espressione booleana
+                while (!String.IsNullOrEmpty(line = file.ReadLine())) // quella tra parentesi si chiama guardia ed e' un'espressione booleana
                 {
                     String[] resultArray = line.Split(chararray);
                     saldo= resultArray[1];

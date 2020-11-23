@@ -18,7 +18,7 @@ namespace Accademy.Temperature
 
             for (int i = 0; i < 50; i++)
             {
-                double n = Accademy.Helper.Helper.GetRandomDouble(20, 30); //cambiare in double
+                double n = Accademy.Helper.Helper.GetRandomDouble(20, 30);
                 term.SimulateTemp(n);
             }
             Console.ReadLine();

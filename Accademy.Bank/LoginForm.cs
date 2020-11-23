@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Accademy.Bank
 {
-    public partial class LoginForm : Form
+    public partial class LoginForm : Form   //partial: suddivisione in più file della definizione di una classe
     {
         private Accademy.DataManager.IDataManager dataManager;
 
@@ -33,7 +33,7 @@ namespace Accademy.Bank
 
             if (dataManager.LoginIsOK(username,password))
             {
-                if (dataManager.IsAnOwner(username))
+                if (dataManager.IsAnOwner(username)) //se è già un cliente, allora vado in ManageForm
                 {
                     ContoCorrente cc= dataManager.GetContoCorrenteByUsername(username);
                     ManageCCForm manageForm = new ManageCCForm(cc.GetNumeroConto());
@@ -41,7 +41,7 @@ namespace Accademy.Bank
                     manageForm.Show();
                     this.Hide();
                 }
-                else
+                else  //se non è cliente, quindi non ha un conto corrente, vado in OpenForm per aprirne uno
                 {
                     //OpenCCForm openForm = new OpenCCForm();
                     //openForm.CurrentUser = username;

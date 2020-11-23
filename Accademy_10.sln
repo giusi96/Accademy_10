@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanResources", "HumanReso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accademy.Geometry", "Accademy.Geometry\Accademy.Geometry.csproj", "{ABDAD410-DF5F-471A-A642-6AF7CE9BF30A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unipi", "Unipi\Unipi.csproj", "{68F94C10-70FC-469C-99B3-35214FD38F77}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accademy.GeometryAbstract", "Accademy.GeometryAbstract\Accademy.GeometryAbstract.csproj", "{C3870A1E-CACA-4CBF-97FB-6D9018E41F48}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accademy.Helper", "Accademy.Helper\Accademy.Helper.csproj", "{BD55CB96-6391-4061-843B-88109E1C819A}"
@@ -24,8 +22,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accademy.DataManager", "DataManager\Accademy.DataManager.csproj", "{812C7702-5307-43B8-BA55-85E9AD54FAB2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accademy.Entities", "Accademy.Entities\Accademy.Entities.csproj", "{438FFF1D-A5DD-4ACD-9261-81E4BAD6857A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accademy.Delegate", "Accademy.Delegate\Accademy.Delegate.csproj", "{C57A782C-A164-4D56-A341-89847DCF3CF0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accademy.MailSystem", "Accademy.MailSystem\Accademy.MailSystem.csproj", "{8071A2E8-41D8-46AC-8989-DFB82FE89AE2}"
 EndProject
@@ -55,10 +51,6 @@ Global
 		{ABDAD410-DF5F-471A-A642-6AF7CE9BF30A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABDAD410-DF5F-471A-A642-6AF7CE9BF30A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABDAD410-DF5F-471A-A642-6AF7CE9BF30A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{68F94C10-70FC-469C-99B3-35214FD38F77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{68F94C10-70FC-469C-99B3-35214FD38F77}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{68F94C10-70FC-469C-99B3-35214FD38F77}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{68F94C10-70FC-469C-99B3-35214FD38F77}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C3870A1E-CACA-4CBF-97FB-6D9018E41F48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C3870A1E-CACA-4CBF-97FB-6D9018E41F48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3870A1E-CACA-4CBF-97FB-6D9018E41F48}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -87,10 +79,6 @@ Global
 		{438FFF1D-A5DD-4ACD-9261-81E4BAD6857A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{438FFF1D-A5DD-4ACD-9261-81E4BAD6857A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{438FFF1D-A5DD-4ACD-9261-81E4BAD6857A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C57A782C-A164-4D56-A341-89847DCF3CF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C57A782C-A164-4D56-A341-89847DCF3CF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C57A782C-A164-4D56-A341-89847DCF3CF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C57A782C-A164-4D56-A341-89847DCF3CF0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8071A2E8-41D8-46AC-8989-DFB82FE89AE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8071A2E8-41D8-46AC-8989-DFB82FE89AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8071A2E8-41D8-46AC-8989-DFB82FE89AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU

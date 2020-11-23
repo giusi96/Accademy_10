@@ -18,15 +18,15 @@ namespace Accademy.lambda
             //List<int> result = FilterInts(lst, filterOdd); //invoco il delegate passandogli i parametri
             //List<int> result2 = FilterInts(lst, IsEven);
           
-            MyDelegate lambda = (i, s) =>
-            {
-                 if (i > s.Length)
-                     return true;
-                 else
-                     return false;
-            };
+            //MyDelegate lambda = (i, s) =>
+            //{
+            //     if (i > s.Length)
+            //         return true;
+            //     else
+            //         return false;
+            //};
             
-            NewDelegate new_lambda = () => { return true; };
+            //NewDelegate new_lambda = () => { return true; };
 
             //List<int> result = FilterInts(lst, i => (i % 2) == 1); //lambda expression
 
@@ -36,6 +36,7 @@ namespace Accademy.lambda
             {
                 Console.WriteLine(item);
             }
+            Console.ReadLine();
         }
 
         public static bool IsOdd(int x)

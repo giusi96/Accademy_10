@@ -38,7 +38,7 @@ namespace Accademy.MailSystem
                 {
                     MailManagerEventHandler mm_eh = (MailManagerEventHandler)item;
                     mm_eh(this, args);
-                   } 
+                } 
             }
         }
     }
